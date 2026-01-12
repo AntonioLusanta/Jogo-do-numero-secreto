@@ -6,10 +6,10 @@ let tentativas = 1;
 function exibirTextoNaTela(tag, texto) {
     let campo = document.querySelector(tag);
     campo.innerHTML = texto;
-    let utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = "pt-BR"; // Português do Brasil
-    utterance.rate = 1.2;
-    speechSynthesis.speak(utterance);
+    let vozNavegador = new SpeechSynthesisUtterance(texto);
+    vozNavegador.lang = "pt-BR";
+    vozNavegador.rate = 1.2;
+    speechSynthesis.speak(vozNavegador);
 }
 
 function exibirMensagemInicial() {
@@ -56,7 +56,7 @@ function gerarNumeroAleatorio() {
 }
 
 function limparCampo() {
-    chute = document.querySelector('input');
+    let chute = document.querySelector('input');
     chute.value = '';
 }
 
